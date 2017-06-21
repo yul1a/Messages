@@ -1,0 +1,15 @@
+{
+  "name": "Messages",
+  "version": "1.0.0",
+  "description": "Test task",
+  "main": "application.js",
+  "scripts": {
+    "init": "npm install"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tsd": "^0.6.5",
+    "typescript": "^1.6.2"
+  }
+}

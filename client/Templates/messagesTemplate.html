@@ -1,0 +1,62 @@
+<div role="navigation">
+    <div class="container">
+
+        <table class="table table-hover table-striped table-condensed">
+            <tr>
+                <th><a href="" data-ng-click="predicate = 'Id'; reverse=!reverse">Id</a></th>
+
+                <th class="text-right hidden-xs hidden-sm">
+                    <a href="" data-ng-click="predicate = 'Header'; reverse=!reverse">Header</a>
+                </th>
+                <th class="text-right">
+                    Body
+                </th>
+                <th class="text-right">
+                    Actions
+                </th>
+            </tr>
+            <tr class="message" data-ng-repeat="message in vm.messages">
+                <td class="text-left">
+                    <div class="messageId">{{message.Id}}</div>
+                </td>
+                <td class="text-right hidden-xs hidden-sm">
+                    <div class ="messageHeader">{{message.Header}}</div>
+                </td>
+                <td class="text-right hidden-xs hidden-sm">
+                    <input class="messageBody"  ng-model="message.Body" />
+                </td>
+                <td class="text-right">
+                    <button data-ng-click="vm.DeleteMessage(message)" class="delete btn btn-primary btn-xs">Delete</button>
+                    <button data-ng-click="vm.UpdateMessage(message)" class="update btn btn-primary btn-xs">Update</button>
+                    <button data-ng-click="vm.GetMessageBody(message)" class="getbody btn btn-primary btn-xs">Body</button>
+                </td>
+            </tr>
+
+            <!--<tr>-->
+            <!--<td class="text-left">-->
+            <!--Create new-->
+            <!--</td>-->
+            <!--<td class="text-right hidden-xs hidden-sm">-->
+            <!--<input class="newMessageHeader" ng-model="newMessage.Header" />-->
+            <!--</td>-->
+            <!--<td class="text-right hidden-xs hidden-sm">-->
+            <!--<input class="newMessageBody" ng-model="newMessage.Body" />-->
+            <!--</td>-->
+            <!--<td class="text-right">-->
+            <!--<button data-ng-click="vm.CreateNewMessage(newMessage)" class="submit btn btn-primary btn-xs">Submit</button>-->
+            <!--</td>-->
+            <!--</tr>-->
+
+        </table>
+        <div>
+
+            <div>Create new</div>
+            <input placeholder="Header" id="newMessageHeader" ng-model="newMessage.Header" />
+            <input placeholder="Body" id="newMessageBody" ng-model="newMessage.Body" />
+            <button data-ng-click="vm.CreateNewMessage(newMessage)" class="submit btn btn-primary btn-xs">Submit</button>
+
+        </div>
+    </div>
+</div>
+
+</div><!-- /.container -->
